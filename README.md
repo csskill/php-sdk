@@ -63,10 +63,10 @@ $apiInstance = new OpenAPI\Client\Api\MatchApi(
 $id = 'id_example'; // string | The id of the match
 
 try {
-    $result = $apiInstance->call1f95c35fe93e222a6cf65c68b4500d60($id);
+    $result = $apiInstance->getMatch($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MatchApi->call1f95c35fe93e222a6cf65c68b4500d60: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MatchApi->getMatch: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -77,10 +77,10 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*MatchApi* | [**call1f95c35fe93e222a6cf65c68b4500d60**](docs/Api/MatchApi.md#call1f95c35fe93e222a6cf65c68b4500d60) | **GET** /api/public/match/{id} | Get a match by its id
-*UserApi* | [**call40d2bb5b656516284d4a0b26e0886019**](docs/Api/UserApi.md#call40d2bb5b656516284d4a0b26e0886019) | **GET** /api/public/user/steam/{steam_id} | Get a user by their steam_id
-*UserApi* | [**call664d8a8b84751129b40eea6e9c8fbefb**](docs/Api/UserApi.md#call664d8a8b84751129b40eea6e9c8fbefb) | **GET** /api/public/user/{id} | Get a user by their id
-*UserApi* | [**d34163056174558da0a65c7735a3b5e0**](docs/Api/UserApi.md#d34163056174558da0a65c7735a3b5e0) | **GET** /api/public/user/{id}/matches | Get recent matches for a user
+*MatchApi* | [**getMatch**](docs/Api/MatchApi.md#getmatch) | **GET** /api/public/match/{id} | Get a match by its id
+*UserApi* | [**getRecentMatches**](docs/Api/UserApi.md#getrecentmatches) | **GET** /api/public/user/{id}/matches | Get recent matches for a user
+*UserApi* | [**getUser**](docs/Api/UserApi.md#getuser) | **GET** /api/public/user/{id} | Get a user by their id
+*UserApi* | [**getUserBySteamId**](docs/Api/UserApi.md#getuserbysteamid) | **GET** /api/public/user/steam/{steam_id} | Get a user by their steam_id
 
 ## Models
 

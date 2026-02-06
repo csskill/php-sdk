@@ -6,13 +6,13 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**call1f95c35fe93e222a6cf65c68b4500d60()**](MatchApi.md#call1f95c35fe93e222a6cf65c68b4500d60) | **GET** /api/public/match/{id} | Get a match by its id |
+| [**getMatch()**](MatchApi.md#getMatch) | **GET** /api/public/match/{id} | Get a match by its id |
 
 
-## `call1f95c35fe93e222a6cf65c68b4500d60()`
+## `getMatch()`
 
 ```php
-call1f95c35fe93e222a6cf65c68b4500d60($id): \OpenAPI\Client\Model\MatchResponse
+getMatch($id): \OpenAPI\Client\Model\MatchResponse
 ```
 
 Get a match by its id
@@ -39,10 +39,10 @@ $apiInstance = new OpenAPI\Client\Api\MatchApi(
 $id = 'id_example'; // string | The id of the match
 
 try {
-    $result = $apiInstance->call1f95c35fe93e222a6cf65c68b4500d60($id);
+    $result = $apiInstance->getMatch($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MatchApi->call1f95c35fe93e222a6cf65c68b4500d60: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MatchApi->getMatch: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

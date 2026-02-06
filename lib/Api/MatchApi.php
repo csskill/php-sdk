@@ -75,7 +75,7 @@ class MatchApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'call1f95c35fe93e222a6cf65c68b4500d60' => [
+        'getMatch' => [
             'application/json',
         ],
     ];
@@ -127,38 +127,38 @@ class MatchApi
     }
 
     /**
-     * Operation call1f95c35fe93e222a6cf65c68b4500d60
+     * Operation getMatch
      *
      * Get a match by its id
      *
      * @param  string $id The id of the match (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMatch'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\MatchResponse
      */
-    public function call1f95c35fe93e222a6cf65c68b4500d60($id, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
+    public function getMatch($id, string $contentType = self::contentTypes['getMatch'][0])
     {
-        list($response) = $this->call1f95c35fe93e222a6cf65c68b4500d60WithHttpInfo($id, $contentType);
+        list($response) = $this->getMatchWithHttpInfo($id, $contentType);
         return $response;
     }
 
     /**
-     * Operation call1f95c35fe93e222a6cf65c68b4500d60WithHttpInfo
+     * Operation getMatchWithHttpInfo
      *
      * Get a match by its id
      *
      * @param  string $id The id of the match (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMatch'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\MatchResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call1f95c35fe93e222a6cf65c68b4500d60WithHttpInfo($id, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
+    public function getMatchWithHttpInfo($id, string $contentType = self::contentTypes['getMatch'][0])
     {
-        $request = $this->call1f95c35fe93e222a6cf65c68b4500d60Request($id, $contentType);
+        $request = $this->getMatchRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -230,19 +230,19 @@ class MatchApi
     }
 
     /**
-     * Operation call1f95c35fe93e222a6cf65c68b4500d60Async
+     * Operation getMatchAsync
      *
      * Get a match by its id
      *
      * @param  string $id The id of the match (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call1f95c35fe93e222a6cf65c68b4500d60Async($id, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
+    public function getMatchAsync($id, string $contentType = self::contentTypes['getMatch'][0])
     {
-        return $this->call1f95c35fe93e222a6cf65c68b4500d60AsyncWithHttpInfo($id, $contentType)
+        return $this->getMatchAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -251,20 +251,20 @@ class MatchApi
     }
 
     /**
-     * Operation call1f95c35fe93e222a6cf65c68b4500d60AsyncWithHttpInfo
+     * Operation getMatchAsyncWithHttpInfo
      *
      * Get a match by its id
      *
      * @param  string $id The id of the match (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call1f95c35fe93e222a6cf65c68b4500d60AsyncWithHttpInfo($id, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
+    public function getMatchAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getMatch'][0])
     {
         $returnType = '\OpenAPI\Client\Model\MatchResponse';
-        $request = $this->call1f95c35fe93e222a6cf65c68b4500d60Request($id, $contentType);
+        $request = $this->getMatchRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -303,21 +303,21 @@ class MatchApi
     }
 
     /**
-     * Create request for operation 'call1f95c35fe93e222a6cf65c68b4500d60'
+     * Create request for operation 'getMatch'
      *
      * @param  string $id The id of the match (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getMatch'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call1f95c35fe93e222a6cf65c68b4500d60Request($id, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
+    public function getMatchRequest($id, string $contentType = self::contentTypes['getMatch'][0])
     {
 
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling call1f95c35fe93e222a6cf65c68b4500d60'
+                'Missing the required parameter $id when calling getMatch'
             );
         }
 

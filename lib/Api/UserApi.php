@@ -75,13 +75,13 @@ class UserApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'call40d2bb5b656516284d4a0b26e0886019' => [
+        'getRecentMatches' => [
             'application/json',
         ],
-        'call664d8a8b84751129b40eea6e9c8fbefb' => [
+        'getUser' => [
             'application/json',
         ],
-        'd34163056174558da0a65c7735a3b5e0' => [
+        'getUserBySteamId' => [
             'application/json',
         ],
     ];
@@ -133,38 +133,38 @@ class UserApi
     }
 
     /**
-     * Operation call40d2bb5b656516284d4a0b26e0886019
+     * Operation getRecentMatches
      *
-     * Get a user by their steam_id
+     * Get recent matches for a user
      *
-     * @param  string $steam_id The steam_id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'] to see the possible values for this operation
+     * @param  string $id The id of the user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRecentMatches'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserResponse
+     * @return \OpenAPI\Client\Model\UserMatchesResponse
      */
-    public function call40d2bb5b656516284d4a0b26e0886019($steam_id, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
+    public function getRecentMatches($id, string $contentType = self::contentTypes['getRecentMatches'][0])
     {
-        list($response) = $this->call40d2bb5b656516284d4a0b26e0886019WithHttpInfo($steam_id, $contentType);
+        list($response) = $this->getRecentMatchesWithHttpInfo($id, $contentType);
         return $response;
     }
 
     /**
-     * Operation call40d2bb5b656516284d4a0b26e0886019WithHttpInfo
+     * Operation getRecentMatchesWithHttpInfo
      *
-     * Get a user by their steam_id
+     * Get recent matches for a user
      *
-     * @param  string $steam_id The steam_id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'] to see the possible values for this operation
+     * @param  string $id The id of the user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRecentMatches'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UserMatchesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call40d2bb5b656516284d4a0b26e0886019WithHttpInfo($steam_id, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
+    public function getRecentMatchesWithHttpInfo($id, string $contentType = self::contentTypes['getRecentMatches'][0])
     {
-        $request = $this->call40d2bb5b656516284d4a0b26e0886019Request($steam_id, $contentType);
+        $request = $this->getRecentMatchesRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -192,7 +192,7 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\UserResponse',
+                        '\OpenAPI\Client\Model\UserMatchesResponse',
                         $request,
                         $response,
                     );
@@ -214,7 +214,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\UserResponse',
+                '\OpenAPI\Client\Model\UserMatchesResponse',
                 $request,
                 $response,
             );
@@ -223,7 +223,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserResponse',
+                        '\OpenAPI\Client\Model\UserMatchesResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -236,19 +236,19 @@ class UserApi
     }
 
     /**
-     * Operation call40d2bb5b656516284d4a0b26e0886019Async
+     * Operation getRecentMatchesAsync
      *
-     * Get a user by their steam_id
+     * Get recent matches for a user
      *
-     * @param  string $steam_id The steam_id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'] to see the possible values for this operation
+     * @param  string $id The id of the user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRecentMatches'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call40d2bb5b656516284d4a0b26e0886019Async($steam_id, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
+    public function getRecentMatchesAsync($id, string $contentType = self::contentTypes['getRecentMatches'][0])
     {
-        return $this->call40d2bb5b656516284d4a0b26e0886019AsyncWithHttpInfo($steam_id, $contentType)
+        return $this->getRecentMatchesAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -257,20 +257,20 @@ class UserApi
     }
 
     /**
-     * Operation call40d2bb5b656516284d4a0b26e0886019AsyncWithHttpInfo
+     * Operation getRecentMatchesAsyncWithHttpInfo
      *
-     * Get a user by their steam_id
+     * Get recent matches for a user
      *
-     * @param  string $steam_id The steam_id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'] to see the possible values for this operation
+     * @param  string $id The id of the user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRecentMatches'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call40d2bb5b656516284d4a0b26e0886019AsyncWithHttpInfo($steam_id, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
+    public function getRecentMatchesAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getRecentMatches'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UserResponse';
-        $request = $this->call40d2bb5b656516284d4a0b26e0886019Request($steam_id, $contentType);
+        $returnType = '\OpenAPI\Client\Model\UserMatchesResponse';
+        $request = $this->getRecentMatchesRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -309,26 +309,26 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'call40d2bb5b656516284d4a0b26e0886019'
+     * Create request for operation 'getRecentMatches'
      *
-     * @param  string $steam_id The steam_id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'] to see the possible values for this operation
+     * @param  string $id The id of the user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getRecentMatches'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call40d2bb5b656516284d4a0b26e0886019Request($steam_id, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
+    public function getRecentMatchesRequest($id, string $contentType = self::contentTypes['getRecentMatches'][0])
     {
 
-        // verify the required parameter 'steam_id' is set
-        if ($steam_id === null || (is_array($steam_id) && count($steam_id) === 0)) {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $steam_id when calling call40d2bb5b656516284d4a0b26e0886019'
+                'Missing the required parameter $id when calling getRecentMatches'
             );
         }
 
 
-        $resourcePath = '/api/public/user/steam/{steam_id}';
+        $resourcePath = '/api/public/user/{id}/matches';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -338,10 +338,10 @@ class UserApi
 
 
         // path params
-        if ($steam_id !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                '{' . 'steam_id' . '}',
-                ObjectSerializer::toPathValue($steam_id),
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
                 $resourcePath
             );
         }
@@ -406,38 +406,38 @@ class UserApi
     }
 
     /**
-     * Operation call664d8a8b84751129b40eea6e9c8fbefb
+     * Operation getUser
      *
      * Get a user by their id
      *
      * @param  string $id The id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUser'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UserResponse
      */
-    public function call664d8a8b84751129b40eea6e9c8fbefb($id, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
+    public function getUser($id, string $contentType = self::contentTypes['getUser'][0])
     {
-        list($response) = $this->call664d8a8b84751129b40eea6e9c8fbefbWithHttpInfo($id, $contentType);
+        list($response) = $this->getUserWithHttpInfo($id, $contentType);
         return $response;
     }
 
     /**
-     * Operation call664d8a8b84751129b40eea6e9c8fbefbWithHttpInfo
+     * Operation getUserWithHttpInfo
      *
      * Get a user by their id
      *
      * @param  string $id The id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUser'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UserResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call664d8a8b84751129b40eea6e9c8fbefbWithHttpInfo($id, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
+    public function getUserWithHttpInfo($id, string $contentType = self::contentTypes['getUser'][0])
     {
-        $request = $this->call664d8a8b84751129b40eea6e9c8fbefbRequest($id, $contentType);
+        $request = $this->getUserRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -509,19 +509,19 @@ class UserApi
     }
 
     /**
-     * Operation call664d8a8b84751129b40eea6e9c8fbefbAsync
+     * Operation getUserAsync
      *
      * Get a user by their id
      *
      * @param  string $id The id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call664d8a8b84751129b40eea6e9c8fbefbAsync($id, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
+    public function getUserAsync($id, string $contentType = self::contentTypes['getUser'][0])
     {
-        return $this->call664d8a8b84751129b40eea6e9c8fbefbAsyncWithHttpInfo($id, $contentType)
+        return $this->getUserAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -530,20 +530,20 @@ class UserApi
     }
 
     /**
-     * Operation call664d8a8b84751129b40eea6e9c8fbefbAsyncWithHttpInfo
+     * Operation getUserAsyncWithHttpInfo
      *
      * Get a user by their id
      *
      * @param  string $id The id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call664d8a8b84751129b40eea6e9c8fbefbAsyncWithHttpInfo($id, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
+    public function getUserAsyncWithHttpInfo($id, string $contentType = self::contentTypes['getUser'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UserResponse';
-        $request = $this->call664d8a8b84751129b40eea6e9c8fbefbRequest($id, $contentType);
+        $request = $this->getUserRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -582,21 +582,21 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'call664d8a8b84751129b40eea6e9c8fbefb'
+     * Create request for operation 'getUser'
      *
      * @param  string $id The id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUser'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call664d8a8b84751129b40eea6e9c8fbefbRequest($id, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
+    public function getUserRequest($id, string $contentType = self::contentTypes['getUser'][0])
     {
 
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling call664d8a8b84751129b40eea6e9c8fbefb'
+                'Missing the required parameter $id when calling getUser'
             );
         }
 
@@ -679,38 +679,38 @@ class UserApi
     }
 
     /**
-     * Operation d34163056174558da0a65c7735a3b5e0
+     * Operation getUserBySteamId
      *
-     * Get recent matches for a user
+     * Get a user by their steam_id
      *
-     * @param  string $id The id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d34163056174558da0a65c7735a3b5e0'] to see the possible values for this operation
+     * @param  string $steam_id The steam_id of the user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserBySteamId'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserMatchesResponse
+     * @return \OpenAPI\Client\Model\UserResponse
      */
-    public function d34163056174558da0a65c7735a3b5e0($id, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
+    public function getUserBySteamId($steam_id, string $contentType = self::contentTypes['getUserBySteamId'][0])
     {
-        list($response) = $this->d34163056174558da0a65c7735a3b5e0WithHttpInfo($id, $contentType);
+        list($response) = $this->getUserBySteamIdWithHttpInfo($steam_id, $contentType);
         return $response;
     }
 
     /**
-     * Operation d34163056174558da0a65c7735a3b5e0WithHttpInfo
+     * Operation getUserBySteamIdWithHttpInfo
      *
-     * Get recent matches for a user
+     * Get a user by their steam_id
      *
-     * @param  string $id The id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d34163056174558da0a65c7735a3b5e0'] to see the possible values for this operation
+     * @param  string $steam_id The steam_id of the user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserBySteamId'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserMatchesResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\UserResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function d34163056174558da0a65c7735a3b5e0WithHttpInfo($id, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
+    public function getUserBySteamIdWithHttpInfo($steam_id, string $contentType = self::contentTypes['getUserBySteamId'][0])
     {
-        $request = $this->d34163056174558da0a65c7735a3b5e0Request($id, $contentType);
+        $request = $this->getUserBySteamIdRequest($steam_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -738,7 +738,7 @@ class UserApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\OpenAPI\Client\Model\UserMatchesResponse',
+                        '\OpenAPI\Client\Model\UserResponse',
                         $request,
                         $response,
                     );
@@ -760,7 +760,7 @@ class UserApi
             }
 
             return $this->handleResponseWithDataType(
-                '\OpenAPI\Client\Model\UserMatchesResponse',
+                '\OpenAPI\Client\Model\UserResponse',
                 $request,
                 $response,
             );
@@ -769,7 +769,7 @@ class UserApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserMatchesResponse',
+                        '\OpenAPI\Client\Model\UserResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -782,19 +782,19 @@ class UserApi
     }
 
     /**
-     * Operation d34163056174558da0a65c7735a3b5e0Async
+     * Operation getUserBySteamIdAsync
      *
-     * Get recent matches for a user
+     * Get a user by their steam_id
      *
-     * @param  string $id The id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d34163056174558da0a65c7735a3b5e0'] to see the possible values for this operation
+     * @param  string $steam_id The steam_id of the user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserBySteamId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function d34163056174558da0a65c7735a3b5e0Async($id, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
+    public function getUserBySteamIdAsync($steam_id, string $contentType = self::contentTypes['getUserBySteamId'][0])
     {
-        return $this->d34163056174558da0a65c7735a3b5e0AsyncWithHttpInfo($id, $contentType)
+        return $this->getUserBySteamIdAsyncWithHttpInfo($steam_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -803,20 +803,20 @@ class UserApi
     }
 
     /**
-     * Operation d34163056174558da0a65c7735a3b5e0AsyncWithHttpInfo
+     * Operation getUserBySteamIdAsyncWithHttpInfo
      *
-     * Get recent matches for a user
+     * Get a user by their steam_id
      *
-     * @param  string $id The id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d34163056174558da0a65c7735a3b5e0'] to see the possible values for this operation
+     * @param  string $steam_id The steam_id of the user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserBySteamId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function d34163056174558da0a65c7735a3b5e0AsyncWithHttpInfo($id, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
+    public function getUserBySteamIdAsyncWithHttpInfo($steam_id, string $contentType = self::contentTypes['getUserBySteamId'][0])
     {
-        $returnType = '\OpenAPI\Client\Model\UserMatchesResponse';
-        $request = $this->d34163056174558da0a65c7735a3b5e0Request($id, $contentType);
+        $returnType = '\OpenAPI\Client\Model\UserResponse';
+        $request = $this->getUserBySteamIdRequest($steam_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -855,26 +855,26 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'd34163056174558da0a65c7735a3b5e0'
+     * Create request for operation 'getUserBySteamId'
      *
-     * @param  string $id The id of the user (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d34163056174558da0a65c7735a3b5e0'] to see the possible values for this operation
+     * @param  string $steam_id The steam_id of the user (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getUserBySteamId'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function d34163056174558da0a65c7735a3b5e0Request($id, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
+    public function getUserBySteamIdRequest($steam_id, string $contentType = self::contentTypes['getUserBySteamId'][0])
     {
 
-        // verify the required parameter 'id' is set
-        if ($id === null || (is_array($id) && count($id) === 0)) {
+        // verify the required parameter 'steam_id' is set
+        if ($steam_id === null || (is_array($steam_id) && count($steam_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling d34163056174558da0a65c7735a3b5e0'
+                'Missing the required parameter $steam_id when calling getUserBySteamId'
             );
         }
 
 
-        $resourcePath = '/api/public/user/{id}/matches';
+        $resourcePath = '/api/public/user/steam/{steam_id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -884,10 +884,10 @@ class UserApi
 
 
         // path params
-        if ($id !== null) {
+        if ($steam_id !== null) {
             $resourcePath = str_replace(
-                '{' . 'id' . '}',
-                ObjectSerializer::toPathValue($id),
+                '{' . 'steam_id' . '}',
+                ObjectSerializer::toPathValue($steam_id),
                 $resourcePath
             );
         }
