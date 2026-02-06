@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .php-cs-fixer.dist.php
 .travis.yml
 README.md
@@ -34,14 +33,3 @@ lib/Model/UserResponse.php
 lib/Model/UserStatsResponse.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/MatchApiTest.php
-test/Api/UserApiTest.php
-test/Model/MatchPlayerResponseTest.php
-test/Model/MatchResponseTest.php
-test/Model/MatchStatsResponseTest.php
-test/Model/MatchTeamResponseTest.php
-test/Model/MatchUserStatsResponseTest.php
-test/Model/UserMatchResponseTest.php
-test/Model/UserMatchesResponseTest.php
-test/Model/UserResponseTest.php
-test/Model/UserStatsResponseTest.php

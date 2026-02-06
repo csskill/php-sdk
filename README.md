@@ -60,10 +60,10 @@ $apiInstance = new OpenAPI\Client\Api\MatchApi(
     new GuzzleHttp\Client(),
     $config
 );
-$UNKNOWN_PARAMETER_NAME = new \OpenAPI\Client\Model\null(); //  | The id of the match
+$id = 'id_example'; // string | The id of the match
 
 try {
-    $result = $apiInstance->call1f95c35fe93e222a6cf65c68b4500d60($UNKNOWN_PARAMETER_NAME);
+    $result = $apiInstance->call1f95c35fe93e222a6cf65c68b4500d60($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MatchApi->call1f95c35fe93e222a6cf65c68b4500d60: ', $e->getMessage(), PHP_EOL;

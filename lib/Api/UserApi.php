@@ -137,16 +137,16 @@ class UserApi
      *
      * Get a user by their steam_id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The steam_id of the user (required)
+     * @param  string $steam_id The steam_id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UserResponse
      */
-    public function call40d2bb5b656516284d4a0b26e0886019($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
+    public function call40d2bb5b656516284d4a0b26e0886019($steam_id, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
     {
-        list($response) = $this->call40d2bb5b656516284d4a0b26e0886019WithHttpInfo($UNKNOWN_PARAMETER_NAME, $contentType);
+        list($response) = $this->call40d2bb5b656516284d4a0b26e0886019WithHttpInfo($steam_id, $contentType);
         return $response;
     }
 
@@ -155,16 +155,16 @@ class UserApi
      *
      * Get a user by their steam_id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The steam_id of the user (required)
+     * @param  string $steam_id The steam_id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UserResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call40d2bb5b656516284d4a0b26e0886019WithHttpInfo($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
+    public function call40d2bb5b656516284d4a0b26e0886019WithHttpInfo($steam_id, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
     {
-        $request = $this->call40d2bb5b656516284d4a0b26e0886019Request($UNKNOWN_PARAMETER_NAME, $contentType);
+        $request = $this->call40d2bb5b656516284d4a0b26e0886019Request($steam_id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -240,15 +240,15 @@ class UserApi
      *
      * Get a user by their steam_id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The steam_id of the user (required)
+     * @param  string $steam_id The steam_id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call40d2bb5b656516284d4a0b26e0886019Async($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
+    public function call40d2bb5b656516284d4a0b26e0886019Async($steam_id, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
     {
-        return $this->call40d2bb5b656516284d4a0b26e0886019AsyncWithHttpInfo($UNKNOWN_PARAMETER_NAME, $contentType)
+        return $this->call40d2bb5b656516284d4a0b26e0886019AsyncWithHttpInfo($steam_id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -261,16 +261,16 @@ class UserApi
      *
      * Get a user by their steam_id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The steam_id of the user (required)
+     * @param  string $steam_id The steam_id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call40d2bb5b656516284d4a0b26e0886019AsyncWithHttpInfo($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
+    public function call40d2bb5b656516284d4a0b26e0886019AsyncWithHttpInfo($steam_id, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UserResponse';
-        $request = $this->call40d2bb5b656516284d4a0b26e0886019Request($UNKNOWN_PARAMETER_NAME, $contentType);
+        $request = $this->call40d2bb5b656516284d4a0b26e0886019Request($steam_id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -311,19 +311,19 @@ class UserApi
     /**
      * Create request for operation 'call40d2bb5b656516284d4a0b26e0886019'
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The steam_id of the user (required)
+     * @param  string $steam_id The steam_id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call40d2bb5b656516284d4a0b26e0886019Request($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
+    public function call40d2bb5b656516284d4a0b26e0886019Request($steam_id, string $contentType = self::contentTypes['call40d2bb5b656516284d4a0b26e0886019'][0])
     {
 
-        // verify the required parameter 'UNKNOWN_PARAMETER_NAME' is set
-        if ($UNKNOWN_PARAMETER_NAME === null || (is_array($UNKNOWN_PARAMETER_NAME) && count($UNKNOWN_PARAMETER_NAME) === 0)) {
+        // verify the required parameter 'steam_id' is set
+        if ($steam_id === null || (is_array($steam_id) && count($steam_id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $UNKNOWN_PARAMETER_NAME when calling call40d2bb5b656516284d4a0b26e0886019'
+                'Missing the required parameter $steam_id when calling call40d2bb5b656516284d4a0b26e0886019'
             );
         }
 
@@ -338,10 +338,10 @@ class UserApi
 
 
         // path params
-        if ($UNKNOWN_PARAMETER_NAME !== null) {
+        if ($steam_id !== null) {
             $resourcePath = str_replace(
                 '{' . 'steam_id' . '}',
-                ObjectSerializer::toPathValue($UNKNOWN_PARAMETER_NAME),
+                ObjectSerializer::toPathValue($steam_id),
                 $resourcePath
             );
         }
@@ -410,16 +410,16 @@ class UserApi
      *
      * Get a user by their id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the user (required)
+     * @param  string $id The id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UserResponse
      */
-    public function call664d8a8b84751129b40eea6e9c8fbefb($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
+    public function call664d8a8b84751129b40eea6e9c8fbefb($id, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
     {
-        list($response) = $this->call664d8a8b84751129b40eea6e9c8fbefbWithHttpInfo($UNKNOWN_PARAMETER_NAME, $contentType);
+        list($response) = $this->call664d8a8b84751129b40eea6e9c8fbefbWithHttpInfo($id, $contentType);
         return $response;
     }
 
@@ -428,16 +428,16 @@ class UserApi
      *
      * Get a user by their id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the user (required)
+     * @param  string $id The id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UserResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call664d8a8b84751129b40eea6e9c8fbefbWithHttpInfo($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
+    public function call664d8a8b84751129b40eea6e9c8fbefbWithHttpInfo($id, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
     {
-        $request = $this->call664d8a8b84751129b40eea6e9c8fbefbRequest($UNKNOWN_PARAMETER_NAME, $contentType);
+        $request = $this->call664d8a8b84751129b40eea6e9c8fbefbRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -513,15 +513,15 @@ class UserApi
      *
      * Get a user by their id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the user (required)
+     * @param  string $id The id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call664d8a8b84751129b40eea6e9c8fbefbAsync($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
+    public function call664d8a8b84751129b40eea6e9c8fbefbAsync($id, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
     {
-        return $this->call664d8a8b84751129b40eea6e9c8fbefbAsyncWithHttpInfo($UNKNOWN_PARAMETER_NAME, $contentType)
+        return $this->call664d8a8b84751129b40eea6e9c8fbefbAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -534,16 +534,16 @@ class UserApi
      *
      * Get a user by their id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the user (required)
+     * @param  string $id The id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call664d8a8b84751129b40eea6e9c8fbefbAsyncWithHttpInfo($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
+    public function call664d8a8b84751129b40eea6e9c8fbefbAsyncWithHttpInfo($id, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UserResponse';
-        $request = $this->call664d8a8b84751129b40eea6e9c8fbefbRequest($UNKNOWN_PARAMETER_NAME, $contentType);
+        $request = $this->call664d8a8b84751129b40eea6e9c8fbefbRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -584,19 +584,19 @@ class UserApi
     /**
      * Create request for operation 'call664d8a8b84751129b40eea6e9c8fbefb'
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the user (required)
+     * @param  string $id The id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call664d8a8b84751129b40eea6e9c8fbefbRequest($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
+    public function call664d8a8b84751129b40eea6e9c8fbefbRequest($id, string $contentType = self::contentTypes['call664d8a8b84751129b40eea6e9c8fbefb'][0])
     {
 
-        // verify the required parameter 'UNKNOWN_PARAMETER_NAME' is set
-        if ($UNKNOWN_PARAMETER_NAME === null || (is_array($UNKNOWN_PARAMETER_NAME) && count($UNKNOWN_PARAMETER_NAME) === 0)) {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $UNKNOWN_PARAMETER_NAME when calling call664d8a8b84751129b40eea6e9c8fbefb'
+                'Missing the required parameter $id when calling call664d8a8b84751129b40eea6e9c8fbefb'
             );
         }
 
@@ -611,10 +611,10 @@ class UserApi
 
 
         // path params
-        if ($UNKNOWN_PARAMETER_NAME !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
                 '{' . 'id' . '}',
-                ObjectSerializer::toPathValue($UNKNOWN_PARAMETER_NAME),
+                ObjectSerializer::toPathValue($id),
                 $resourcePath
             );
         }
@@ -683,16 +683,16 @@ class UserApi
      *
      * Get recent matches for a user
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the user (required)
+     * @param  string $id The id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d34163056174558da0a65c7735a3b5e0'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UserMatchesResponse
      */
-    public function d34163056174558da0a65c7735a3b5e0($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
+    public function d34163056174558da0a65c7735a3b5e0($id, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
     {
-        list($response) = $this->d34163056174558da0a65c7735a3b5e0WithHttpInfo($UNKNOWN_PARAMETER_NAME, $contentType);
+        list($response) = $this->d34163056174558da0a65c7735a3b5e0WithHttpInfo($id, $contentType);
         return $response;
     }
 
@@ -701,16 +701,16 @@ class UserApi
      *
      * Get recent matches for a user
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the user (required)
+     * @param  string $id The id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d34163056174558da0a65c7735a3b5e0'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UserMatchesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function d34163056174558da0a65c7735a3b5e0WithHttpInfo($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
+    public function d34163056174558da0a65c7735a3b5e0WithHttpInfo($id, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
     {
-        $request = $this->d34163056174558da0a65c7735a3b5e0Request($UNKNOWN_PARAMETER_NAME, $contentType);
+        $request = $this->d34163056174558da0a65c7735a3b5e0Request($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -786,15 +786,15 @@ class UserApi
      *
      * Get recent matches for a user
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the user (required)
+     * @param  string $id The id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d34163056174558da0a65c7735a3b5e0'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function d34163056174558da0a65c7735a3b5e0Async($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
+    public function d34163056174558da0a65c7735a3b5e0Async($id, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
     {
-        return $this->d34163056174558da0a65c7735a3b5e0AsyncWithHttpInfo($UNKNOWN_PARAMETER_NAME, $contentType)
+        return $this->d34163056174558da0a65c7735a3b5e0AsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -807,16 +807,16 @@ class UserApi
      *
      * Get recent matches for a user
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the user (required)
+     * @param  string $id The id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d34163056174558da0a65c7735a3b5e0'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function d34163056174558da0a65c7735a3b5e0AsyncWithHttpInfo($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
+    public function d34163056174558da0a65c7735a3b5e0AsyncWithHttpInfo($id, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UserMatchesResponse';
-        $request = $this->d34163056174558da0a65c7735a3b5e0Request($UNKNOWN_PARAMETER_NAME, $contentType);
+        $request = $this->d34163056174558da0a65c7735a3b5e0Request($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -857,19 +857,19 @@ class UserApi
     /**
      * Create request for operation 'd34163056174558da0a65c7735a3b5e0'
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the user (required)
+     * @param  string $id The id of the user (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['d34163056174558da0a65c7735a3b5e0'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function d34163056174558da0a65c7735a3b5e0Request($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
+    public function d34163056174558da0a65c7735a3b5e0Request($id, string $contentType = self::contentTypes['d34163056174558da0a65c7735a3b5e0'][0])
     {
 
-        // verify the required parameter 'UNKNOWN_PARAMETER_NAME' is set
-        if ($UNKNOWN_PARAMETER_NAME === null || (is_array($UNKNOWN_PARAMETER_NAME) && count($UNKNOWN_PARAMETER_NAME) === 0)) {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $UNKNOWN_PARAMETER_NAME when calling d34163056174558da0a65c7735a3b5e0'
+                'Missing the required parameter $id when calling d34163056174558da0a65c7735a3b5e0'
             );
         }
 
@@ -884,10 +884,10 @@ class UserApi
 
 
         // path params
-        if ($UNKNOWN_PARAMETER_NAME !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
                 '{' . 'id' . '}',
-                ObjectSerializer::toPathValue($UNKNOWN_PARAMETER_NAME),
+                ObjectSerializer::toPathValue($id),
                 $resourcePath
             );
         }

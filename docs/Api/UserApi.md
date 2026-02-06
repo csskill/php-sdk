@@ -14,7 +14,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `call40d2bb5b656516284d4a0b26e0886019()`
 
 ```php
-call40d2bb5b656516284d4a0b26e0886019($UNKNOWN_PARAMETER_NAME): \OpenAPI\Client\Model\UserResponse
+call40d2bb5b656516284d4a0b26e0886019($steam_id): \OpenAPI\Client\Model\UserResponse
 ```
 
 Get a user by their steam_id
@@ -38,10 +38,10 @@ $apiInstance = new OpenAPI\Client\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
-$UNKNOWN_PARAMETER_NAME = new \OpenAPI\Client\Model\null(); //  | The steam_id of the user
+$steam_id = 'steam_id_example'; // string | The steam_id of the user
 
 try {
-    $result = $apiInstance->call40d2bb5b656516284d4a0b26e0886019($UNKNOWN_PARAMETER_NAME);
+    $result = $apiInstance->call40d2bb5b656516284d4a0b26e0886019($steam_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->call40d2bb5b656516284d4a0b26e0886019: ', $e->getMessage(), PHP_EOL;
@@ -52,7 +52,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **UNKNOWN_PARAMETER_NAME** | [****](../Model/.md)| The steam_id of the user | |
+| **steam_id** | **string**| The steam_id of the user | |
 
 ### Return type
 
@@ -74,7 +74,7 @@ try {
 ## `call664d8a8b84751129b40eea6e9c8fbefb()`
 
 ```php
-call664d8a8b84751129b40eea6e9c8fbefb($UNKNOWN_PARAMETER_NAME): \OpenAPI\Client\Model\UserResponse
+call664d8a8b84751129b40eea6e9c8fbefb($id): \OpenAPI\Client\Model\UserResponse
 ```
 
 Get a user by their id
@@ -98,10 +98,10 @@ $apiInstance = new OpenAPI\Client\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
-$UNKNOWN_PARAMETER_NAME = new \OpenAPI\Client\Model\null(); //  | The id of the user
+$id = 'id_example'; // string | The id of the user
 
 try {
-    $result = $apiInstance->call664d8a8b84751129b40eea6e9c8fbefb($UNKNOWN_PARAMETER_NAME);
+    $result = $apiInstance->call664d8a8b84751129b40eea6e9c8fbefb($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->call664d8a8b84751129b40eea6e9c8fbefb: ', $e->getMessage(), PHP_EOL;
@@ -112,7 +112,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **UNKNOWN_PARAMETER_NAME** | [****](../Model/.md)| The id of the user | |
+| **id** | **string**| The id of the user | |
 
 ### Return type
 
@@ -134,7 +134,7 @@ try {
 ## `d34163056174558da0a65c7735a3b5e0()`
 
 ```php
-d34163056174558da0a65c7735a3b5e0($UNKNOWN_PARAMETER_NAME): \OpenAPI\Client\Model\UserMatchesResponse
+d34163056174558da0a65c7735a3b5e0($id): \OpenAPI\Client\Model\UserMatchesResponse
 ```
 
 Get recent matches for a user
@@ -158,10 +158,10 @@ $apiInstance = new OpenAPI\Client\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
-$UNKNOWN_PARAMETER_NAME = new \OpenAPI\Client\Model\null(); //  | The id of the user
+$id = 'id_example'; // string | The id of the user
 
 try {
-    $result = $apiInstance->d34163056174558da0a65c7735a3b5e0($UNKNOWN_PARAMETER_NAME);
+    $result = $apiInstance->d34163056174558da0a65c7735a3b5e0($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->d34163056174558da0a65c7735a3b5e0: ', $e->getMessage(), PHP_EOL;
@@ -172,7 +172,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **UNKNOWN_PARAMETER_NAME** | [****](../Model/.md)| The id of the user | |
+| **id** | **string**| The id of the user | |
 
 ### Return type
 

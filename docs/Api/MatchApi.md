@@ -12,7 +12,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `call1f95c35fe93e222a6cf65c68b4500d60()`
 
 ```php
-call1f95c35fe93e222a6cf65c68b4500d60($UNKNOWN_PARAMETER_NAME): \OpenAPI\Client\Model\MatchResponse
+call1f95c35fe93e222a6cf65c68b4500d60($id): \OpenAPI\Client\Model\MatchResponse
 ```
 
 Get a match by its id
@@ -36,10 +36,10 @@ $apiInstance = new OpenAPI\Client\Api\MatchApi(
     new GuzzleHttp\Client(),
     $config
 );
-$UNKNOWN_PARAMETER_NAME = new \OpenAPI\Client\Model\null(); //  | The id of the match
+$id = 'id_example'; // string | The id of the match
 
 try {
-    $result = $apiInstance->call1f95c35fe93e222a6cf65c68b4500d60($UNKNOWN_PARAMETER_NAME);
+    $result = $apiInstance->call1f95c35fe93e222a6cf65c68b4500d60($id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MatchApi->call1f95c35fe93e222a6cf65c68b4500d60: ', $e->getMessage(), PHP_EOL;
@@ -50,7 +50,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **UNKNOWN_PARAMETER_NAME** | [****](../Model/.md)| The id of the match | |
+| **id** | **string**| The id of the match | |
 
 ### Return type
 

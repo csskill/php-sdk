@@ -131,16 +131,16 @@ class MatchApi
      *
      * Get a match by its id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the match (required)
+     * @param  string $id The id of the match (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\MatchResponse
      */
-    public function call1f95c35fe93e222a6cf65c68b4500d60($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
+    public function call1f95c35fe93e222a6cf65c68b4500d60($id, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
     {
-        list($response) = $this->call1f95c35fe93e222a6cf65c68b4500d60WithHttpInfo($UNKNOWN_PARAMETER_NAME, $contentType);
+        list($response) = $this->call1f95c35fe93e222a6cf65c68b4500d60WithHttpInfo($id, $contentType);
         return $response;
     }
 
@@ -149,16 +149,16 @@ class MatchApi
      *
      * Get a match by its id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the match (required)
+     * @param  string $id The id of the match (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\MatchResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function call1f95c35fe93e222a6cf65c68b4500d60WithHttpInfo($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
+    public function call1f95c35fe93e222a6cf65c68b4500d60WithHttpInfo($id, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
     {
-        $request = $this->call1f95c35fe93e222a6cf65c68b4500d60Request($UNKNOWN_PARAMETER_NAME, $contentType);
+        $request = $this->call1f95c35fe93e222a6cf65c68b4500d60Request($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -234,15 +234,15 @@ class MatchApi
      *
      * Get a match by its id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the match (required)
+     * @param  string $id The id of the match (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call1f95c35fe93e222a6cf65c68b4500d60Async($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
+    public function call1f95c35fe93e222a6cf65c68b4500d60Async($id, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
     {
-        return $this->call1f95c35fe93e222a6cf65c68b4500d60AsyncWithHttpInfo($UNKNOWN_PARAMETER_NAME, $contentType)
+        return $this->call1f95c35fe93e222a6cf65c68b4500d60AsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -255,16 +255,16 @@ class MatchApi
      *
      * Get a match by its id
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the match (required)
+     * @param  string $id The id of the match (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function call1f95c35fe93e222a6cf65c68b4500d60AsyncWithHttpInfo($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
+    public function call1f95c35fe93e222a6cf65c68b4500d60AsyncWithHttpInfo($id, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
     {
         $returnType = '\OpenAPI\Client\Model\MatchResponse';
-        $request = $this->call1f95c35fe93e222a6cf65c68b4500d60Request($UNKNOWN_PARAMETER_NAME, $contentType);
+        $request = $this->call1f95c35fe93e222a6cf65c68b4500d60Request($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -305,19 +305,19 @@ class MatchApi
     /**
      * Create request for operation 'call1f95c35fe93e222a6cf65c68b4500d60'
      *
-     * @param   $UNKNOWN_PARAMETER_NAME The id of the match (required)
+     * @param  string $id The id of the match (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function call1f95c35fe93e222a6cf65c68b4500d60Request($UNKNOWN_PARAMETER_NAME, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
+    public function call1f95c35fe93e222a6cf65c68b4500d60Request($id, string $contentType = self::contentTypes['call1f95c35fe93e222a6cf65c68b4500d60'][0])
     {
 
-        // verify the required parameter 'UNKNOWN_PARAMETER_NAME' is set
-        if ($UNKNOWN_PARAMETER_NAME === null || (is_array($UNKNOWN_PARAMETER_NAME) && count($UNKNOWN_PARAMETER_NAME) === 0)) {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $UNKNOWN_PARAMETER_NAME when calling call1f95c35fe93e222a6cf65c68b4500d60'
+                'Missing the required parameter $id when calling call1f95c35fe93e222a6cf65c68b4500d60'
             );
         }
 
@@ -332,10 +332,10 @@ class MatchApi
 
 
         // path params
-        if ($UNKNOWN_PARAMETER_NAME !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
                 '{' . 'id' . '}',
-                ObjectSerializer::toPathValue($UNKNOWN_PARAMETER_NAME),
+                ObjectSerializer::toPathValue($id),
                 $resourcePath
             );
         }
